@@ -1,15 +1,19 @@
 {
   "name": "simplewebapp",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npx sequelize db:migrate && node app.js"
+    "dev": "npx sequelize db:migrate && node ./app/app.js",
+    "cluster": "npx sequelize db:migrate && node ./app/main.js"
   },
-  "author": "",
+  "author": "fnickeata",
   "license": "ISC",
   "dependencies": {
+    "bull": "^4.11.4",
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
+    "node-schedule": "^2.1.1",
     "pg": "^8.11.3",
     "sequelize": "^6.33.0",
     "sequelize-cli": "^6.6.1"
